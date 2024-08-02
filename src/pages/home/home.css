@@ -1,14 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 h1 {
@@ -23,8 +21,106 @@ p {
     margin-top: 20px;
 }
 
+.stock {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    
+}
+
 .stock:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+}
+
+/* add media query to make the stock cards responsive */
+@media (max-width: 1090px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .stock {
+        width: 70%;
+    }
+}
+
+/* add media query to make the stock cards responsive */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .stock {
+        width: 100%;
+    }
+
+    /* fix image span overflow issue */
+    .stock-image {
+        width: 50%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .stock {
+        width: 90%;
+    }
+
+    .stock-image img {
+        margin-top: 20px;
+
+        /* make images keep their aspect ratio but fill the container */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        border-radius: 5px;
+
+    }
+}
+
+/* add media query to make the stock cards responsive */
+@media (max-width: 400px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container h1 {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .stock {
+        padding: 0;
+        width: 100%;
+    }
+
+    /* fix image width overflow the class stock-image */
+    .stock-image {
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+    }
+
+    /* fix image span overflow issue */
+    .stock-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 5px;
+    }
+   
+    .container {
+        padding: 0;
+    }
 }
 
 .stock-image {
@@ -33,7 +129,7 @@ p {
     margin-top: 50px;
     width: 300px;
     height: 200px;
-    background-color: #ccc;
+    background-color: #fff;
     border-radius: 5px;
 }
 
@@ -42,12 +138,18 @@ p {
     display: block;
     margin: 0 auto;
     margin-top: 50px;
-    /* make images keep their aspect ratio but fill the container */
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.stock-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-
     border-radius: 5px;
+    /* zoom out if the image is bigger than the container */
+    object-fit: contain;
 }
 
 .stock-info {
@@ -62,7 +164,8 @@ p {
 }
 
 .stock-price {
-    font-size: 18px;
-    color: #666;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
 }
 
