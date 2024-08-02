@@ -23,6 +23,10 @@ p {
     margin-top: 20px;
 }
 
+.stock:hover {
+    cursor: pointer;
+}
+
 .stock-image {
     display: block;
     margin: 0 auto;
@@ -30,6 +34,19 @@ p {
     width: 300px;
     height: 200px;
     background-color: #ccc;
+    border-radius: 5px;
+}
+
+/* center image vertically and horizontally */
+.stock-image img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* make images keep their aspect ratio but fill the container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
     border-radius: 5px;
 }
 
@@ -48,3 +65,4 @@ p {
     font-size: 18px;
     color: #666;
 }
+
