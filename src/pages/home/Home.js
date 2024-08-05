@@ -29,9 +29,9 @@ export default function Home() {
                                         {stock.symbol}
                                     </h2>
                                     <div className="stock-price">
-                                        <p className="price">${stock.price}</p>
+                                        <p className="price">{stock.price}</p>
                                         <p className={stock.change > 0 ? "change positive" : "change negative"}>
-                                            {stock.change > 0 ? "+" : "-"}${Math.abs(stock.change)}
+                                            {stock.change > 0 ? "+" : "-"}{Math.abs(stock.change)}
                                         </p>
                                     </div>
                                 </div>
