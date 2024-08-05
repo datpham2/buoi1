@@ -1,195 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* CSS styles for the stock detail page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
     color: #333;
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* p {
-    color: #666;
-    text-align: center;
-    margin-top: 20px;
-} */
-
-.stock {
-    display: inline-block;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
-    
-}
-
-.stock:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-/* add media query to make the stock cards responsive */
-@media (max-width: 1090px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .stock {
-        width: 70%;
-    }
-}
-
-/* add media query to make the stock cards responsive */
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .container .stock {
-        width: 100%;
-    }
-
-    /* fix image span overflow issue */
-    .container .stock .stock-image {
-        width: 50%;
-        height: 200px;
-    }
-}
-
-@media (max-width: 400px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .stock {
-        width: 90%;
-    }
-
-    .container .stock-image img {
-        margin-top: 20px;
-
-        /* make images keep their aspect ratio but fill the container */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        border-radius: 5px;
-
-    }
-}
-
-/* add media query to make the stock cards responsive */
-@media (max-width: 400px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .container h1 {
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-
-    .container .stock {
-        padding: 0;
-        width: 100%;
-    }
-
-    /* fix image width overflow the class stock-image */
-    .container .stock .stock-image {
-        display: inline-block;
-        width: 100%;
-        height: 200px;
-    }
-
-    /* fix image span overflow issue */
-    .container .stock .stock-image img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        border-radius: 5px;
-    }
-   
-    .container {
-        padding: 0;
-    }
-}
-
-.container .stock .stock-image {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 300px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-/* center image vertically and horizontally */
-.container .stock .stock-image img {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 300px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-.stock .stock-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    /* zoom out if the image is bigger than the container */
-    object-fit: contain;
-}
-
-.container .stock .stock-info {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.container .stock .stock-info .stock-name {
     font-size: 24px;
-    font-weight: bold;
-    color: #000;
 }
 
-.container .stock .stock-info .stock-price {
-    font-size: 30px;
-    font-weight: bolder;
-    color: #000;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.stock-info {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.container .stock .stock-info .stock-price p {
-    margin: 0 10px;
-}
-
-.container .stock .stock-info .stock-price .percentage {
+.stock-info p {
     margin: 0;
 }
 
-.container .stock .stock-info .stock-price .change {
-    font-size: 22px;
+.stock-info .symbol {
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.container .stock .stock-info .stock-price .change.positive {
+.stock-info .price {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.stock-info .change {
     color: green;
 }
 
-.container .stock .stock-info .stock-price .change.negative {
+.stock-info .change.negative {
     color: red;
 }
 
