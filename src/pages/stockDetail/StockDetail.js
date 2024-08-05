@@ -12,7 +12,8 @@ const StockDetail = () => {
         // Fetch stock detail using the symbol parameter
         const fetchStockDetail = async () => {
             try {
-                const response = await fetch(`API_ENDPOINT/${symbol}`);
+                const response = await fetch(`${API_ENDPOINT}/${symbol}`);
+                console.log(response)
                 const data = await response.json();
                 setStockDetail(data);
             } catch (error) {

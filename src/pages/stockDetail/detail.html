@@ -3,37 +3,73 @@
 <head>
     <title>Stock Detail</title>
     <style>
-        /* CSS styles go here */
+        /* CSS styles for the stock detail page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
             padding: 20px;
         }
-        
+
         h1 {
             color: #333;
             font-size: 24px;
-            margin-bottom: 10px;
         }
-        
-        p {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.5;
+
+        .stock-info {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .stock-info p {
+            margin: 0;
+        }
+
+        .stock-info .symbol {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .stock-info .price {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .stock-info .change {
+            color: green;
+        }
+
+        .stock-info .change.negative {
+            color: red;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Stock Detail</h1>
-        <p>This is the detail page for a stock.</p>
-        <!-- Add more content here -->
+    <h1>Stock Detail</h1>
+
+    <div class="stock-info">
+        <p class="symbol">AAPL</p>
+        <p class="price">$150.25</p>
+        <p class="change">+2.50 (+1.69%)</p>
     </div>
+
+    <script>
+        // JavaScript code for interactive functionality
+        // You can use JavaScript to fetch the stock data from an API and update the HTML dynamically
+        // Here's an example of updating the stock price and change randomly every 5 seconds
+        setInterval(function() {
+            var priceElement = document.querySelector('.stock-info .price');
+            var changeElement = document.querySelector('.stock-info .change');
+
+            var price = parseFloat(priceElement.innerText.replace('$', ''));
+            var change = Math.random() * 10 - 5;
+
+            price += change;
+            priceElement.innerText = '$' + price.toFixed(2);
+            changeElement.innerText = (change >= 0 ? '+' : '') + change.toFixed(2) + ' (' + (change >= 0 ? '+' : '') + (change / price * 100).toFixed(2) + '%)';
+            changeElement.classList.toggle('negative', change < 0);
+        }, 5000);
+    </script>
 </body>
 </html>
