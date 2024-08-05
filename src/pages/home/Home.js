@@ -116,7 +116,8 @@ export default function Home() {
                                 </div>
                             </div> */}
                             <div className='stock-info'>
-                                <p className='symbol'>{stock.symbol}</p>
+                                <p className='symbol'>{stock.symbol} - {stock.longName}
+                                </p>
                                 <p className='price'>${stock.price}</p>
                                 <p className={`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
                                 {stock.favorite ?
