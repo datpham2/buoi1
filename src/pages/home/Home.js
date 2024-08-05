@@ -3,6 +3,34 @@ import './home.css'
 
 export default function Home() {
     const [stocks, setStocks] = React.useState([])
+    
+    function updateFavorite(stock) {
+        fetch(`https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks/${stock.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ...stock,
+                favorite: !stock.favorite
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                setStocks(prevStocks => {
+                    return prevStocks.map(prevStock => {
+                        if (prevStock.id === stock.id) {
+                            return data
+                        }
+                        return prevStock
+                    })
+                })
+            })
+            .catch(error => {
+                console.error('Error:', error)
+            })
+        }
+
     useEffect(() => {
         fetch('https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks')
             .then(res => res.json())
@@ -94,59 +122,13 @@ export default function Home() {
                                 {stock.favorite ?
                                 <i className="fa-solid fa-heart"
                                     onClick={() => {
-                                        fetch(`https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks/${stock.id}`, {
-                                            method: 'PUT',
-                                            headers: {
-                                                'Content-Type': 'application/json'
-                                            },
-                                            body: JSON.stringify({
-                                                ...stock,
-                                                favorite: false
-                                            })
-                                        })
-                                            .then(res => res.json())
-                                            .then(data => {
-                                                setStocks(prevStocks => {
-                                                    return prevStocks.map(prevStock => {
-                                                        if (prevStock.id === stock.id) {
-                                                            return data
-                                                        }
-                                                        return prevStock
-                                                    })
-                                                })
-                                            })
-                                            .catch(error => {
-                                                console.error('Error:', error)
-                                            })
+                                        updateFavorite(stock)
                                     }}
                                 ></i>
                                 :
                                 <i className="fa-regular fa-heart"
                                     onClick={() => {
-                                        fetch(`https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks/${stock.id}`, {
-                                            method: 'PUT',
-                                            headers: {
-                                                'Content-Type': 'application/json'
-                                            },
-                                            body: JSON.stringify({
-                                                ...stock,
-                                                favorite: true
-                                            })
-                                        })
-                                            .then(res => res.json())
-                                            .then(data => {
-                                                setStocks(prevStocks => {
-                                                    return prevStocks.map(prevStock => {
-                                                        if (prevStock.id === stock.id) {
-                                                            return data
-                                                        }
-                                                        return prevStock
-                                                    })
-                                                })
-                                            })
-                                            .catch(error => {
-                                                console.error('Error:', error)
-                                            })
+                                        updateFavorite(stock)
                                     }}
                                 ></i>}
                             </div>
