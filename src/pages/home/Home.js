@@ -91,6 +91,64 @@ export default function Home() {
                                 <p className='symbol'>{stock.symbol}</p>
                                 <p className='price'>${stock.price}</p>
                                 <p className={`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
+                                {stock.favorite ?
+                                <i className="fa-solid fa-heart"
+                                    onClick={() => {
+                                        fetch(`https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks/${stock.id}`, {
+                                            method: 'PUT',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify({
+                                                ...stock,
+                                                favorite: false
+                                            })
+                                        })
+                                            .then(res => res.json())
+                                            .then(data => {
+                                                setStocks(prevStocks => {
+                                                    return prevStocks.map(prevStock => {
+                                                        if (prevStock.id === stock.id) {
+                                                            return data
+                                                        }
+                                                        return prevStock
+                                                    })
+                                                })
+                                            })
+                                            .catch(error => {
+                                                console.error('Error:', error)
+                                            })
+                                    }}
+                                ></i>
+                                :
+                                <i className="fa-regular fa-heart"
+                                    onClick={() => {
+                                        fetch(`https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks/${stock.id}`, {
+                                            method: 'PUT',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify({
+                                                ...stock,
+                                                favorite: true
+                                            })
+                                        })
+                                            .then(res => res.json())
+                                            .then(data => {
+                                                setStocks(prevStocks => {
+                                                    return prevStocks.map(prevStock => {
+                                                        if (prevStock.id === stock.id) {
+                                                            return data
+                                                        }
+                                                        return prevStock
+                                                    })
+                                                })
+                                            })
+                                            .catch(error => {
+                                                console.error('Error:', error)
+                                            })
+                                    }}
+                                ></i>}
                             </div>
                         </div>
                     ))

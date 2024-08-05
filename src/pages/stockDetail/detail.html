@@ -43,7 +43,19 @@
         .stock-info .change.negative {
             color: red;
         }
+
+        .fa-heart {
+            color: #ccc;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        
+        .fa-heart.favorite {
+            color: red;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <h1>Stock Detail</h1>
@@ -52,11 +64,19 @@
         <p class="symbol">AAPL</p>
         <p class="price">$150.25</p>
         <p class="change">+2.50 (+1.69%)</p>
+        <i class="fa-regular fa-heart"></i>
     </div>
 
     <script>
         // JavaScript code for interactive functionality
         // You can use JavaScript to fetch the stock data from an API and update the HTML dynamically
+
+        function toggleFavorite() {
+            var favoriteIcon = document.querySelector('.fa-regural.fa-heart');
+            // replace fa-regural with fa-solid to make the heart solid
+            favoriteIcon.classList.toggle('favorite');
+        }
+
         // Here's an example of updating the stock price and change randomly every 5 seconds
         setInterval(function() {
             var priceElement = document.querySelector('.stock-info .price');
