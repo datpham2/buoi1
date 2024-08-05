@@ -7,6 +7,12 @@ export default function Home() {
         fetch('https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks')
             .then(res => res.json())
             .then(data => setStocks(data))
+        setInterval(function() {
+            let priceElement = document.querySelector('.stock-info .stock-price .price');
+            let changeElement = document.querySelector('.stock-info .stock-price .change');
+
+        }, 5000
+        )
     }
     , [])
 
@@ -31,7 +37,7 @@ export default function Home() {
                                     <div className="stock-price">
                                         <p className="price">{stock.price}</p>
                                         <p className={stock.change > 0 ? "change positive" : "change negative"}>
-                                            {stock.change > 0 ? "+" : "-"}{Math.abs(stock.change)}
+                                            {stock.change > 0 ? "+" : "-"}{Math.abs(stock.change)} ({((stock.change / stock.price) * 100).toFixed(2)}%)
                                         </p>
                                     </div>
                                 </div>
