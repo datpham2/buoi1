@@ -23,6 +23,7 @@ export default function SearchBar() {
                     console.log('result', result);
                     const resultLi = document.createElement('li');
                     resultLi.className = 'list-group-item z-3 bg-light text-dark';
+                    resultLi.style.cursor = 'pointer';
                     resultLi.innerHTML = `<p class="text-primary">${result.symbol}</p><p>${result.longName}</p>`;
                     searchResult.appendChild(resultLi);
                     resultLi.addEventListener('click', () => {

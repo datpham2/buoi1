@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import './detail.css';
 import { useParams } from 'react-router-dom';
+import SearchBar from '../../components/searchBar/SearchBar';
 
 
 const StockDetail = () => {
@@ -30,6 +31,7 @@ const StockDetail = () => {
         <div
             className='stock-detail'
         >
+            <SearchBar />
             {stockDetail ? (
                 <div className="container">
                  <h1

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './home.css'
+import img1 from '../../chart0.webp'
 import SearchBar from '../../components/searchBar/SearchBar'
 
 export default function Home() {
@@ -91,35 +92,32 @@ export default function Home() {
                                     window.location.href = `/quote/${stock.id}`
                                 }}
                             >
-                                {/* <div className="stock-image">
-                                    <img src={stock.image} alt="Stock Image" />
-                                </div>
-                                <div className="stock-info">
-                                    <h2 className="stock-name">
-                                        {stock.symbol}
-                                    </h2>
-                                    <div className="stock-price">
-                                        <p className="price">{stock.price}</p>
-                                        <p className= {`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
-                                    </div>
-                                </div> */}
                                 <div className='stock-info'>
-                                    <p className='symbol'>{stock.symbol} - {stock.longName}
-                                    </p>
-                                    <p className='price'>${stock.price}</p>
-                                    <p className={`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
+                                    <div>
+                                        <p className='symbol'>{stock.symbol} - {stock.longName}
+                                        </p>
+                                        <p className='price'>${stock.price}</p>
+                                        <p className={`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
+                                        
+                                    </div>
+                                    <div className='chart'>
+                                        <img src={img1} alt="chart"
+                                            width="100%"
+                                            height="100%"
+                                        />  
+                                    </div>
                                     {stock.favorite ?
-                                        <i className="fa-solid fa-heart"
-                                            onClick={() => {
-                                                updateFavorite(stock)
-                                            }}
-                                        ></i>
-                                        :
-                                        <i className="fa-regular fa-heart"
-                                            onClick={() => {
-                                                updateFavorite(stock)
-                                            }}
-                                        ></i>}
+                                            <i className="fa-solid fa-heart"
+                                                onClick={() => {
+                                                    updateFavorite(stock)
+                                                }}
+                                            ></i>
+                                            :
+                                            <i className="fa-regular fa-heart"
+                                                onClick={() => {
+                                                    updateFavorite(stock)
+                                                }}
+                                            ></i>}
                                 </div>
                             </div>
                         ))
