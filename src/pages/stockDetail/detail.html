@@ -20,6 +20,7 @@
             border: 1px solid #ccc;
             padding: 10px;
             border-radius: 5px;
+            cursor: pointer;
         }
 
         .stock-info p {
@@ -50,7 +51,6 @@
             cursor: pointer;
         }
 
-        
         .fa-heart.favorite {
             color: red;
         }
@@ -67,6 +67,19 @@
         .search-bar button {
             padding: 5px 10px;
         }
+
+        .search-results {
+            margin-top: 20px;
+        }
+
+        .search-results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .search-results li {
+            margin-bottom: 10px;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -74,7 +87,7 @@
     <h1>Stock Detail</h1>
 
     <div class="search-bar">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Search..." onkeyup="searchStocks(this.value)">
         <button>Search</button>
     </div>
 
@@ -83,16 +96,45 @@
         <p class="price">$150.25</p>
         <p class="change">+2.50 (+1.69%)</p>
         <i class="fa-regular fa-heart"></i>
+        <img src="https://static01.nyt.com/images/2020/07/21/us/cases_orphan_usa-1595349567192-copy/cases_orphan_usa-1595349567192-jumbo-v1115.png?quality=75&auto=webp" alt="Stock Chart">
+    </div>
+
+    <div class="search-results">
+        <ul id="searchResults"></ul>
     </div>
 
     <script>
         // JavaScript code for interactive functionality
         // You can use JavaScript to fetch the stock data from an API and update the HTML dynamically
 
+        // Add event listener to toggle favorite on click
+        var favoriteIcon = document.querySelector('.fa-regular.fa-heart');
+        favoriteIcon.addEventListener('click', toggleFavorite);
+
         function toggleFavorite() {
-            var favoriteIcon = document.querySelector('.fa-regural.fa-heart');
-            // replace fa-regural with fa-solid to make the heart solid
             favoriteIcon.classList.toggle('favorite');
+        }
+
+        function searchStocks(keyword) {
+            var searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+
+            // Fake search results
+            var fakeResults = [
+                'AAPL - Apple Inc.',
+                'GOOGL - Alphabet Inc.',
+                'MSFT - Microsoft Corporation',
+                'AMZN - Amazon.com, Inc.',
+                'FB - Facebook, Inc.'
+            ];
+
+            fakeResults.forEach(function(result) {
+                if (result.toLowerCase().includes(keyword.toLowerCase())) {
+                    var li = document.createElement('li');
+                    li.textContent = result;
+                    searchResults.appendChild(li);
+                }
+            });
         }
 
         // Here's an example of updating the stock price and change randomly every 5 seconds

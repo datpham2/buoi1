@@ -34,7 +34,19 @@
         .stock-info p {
             margin-bottom: 10px;
         }
+        
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
     </style>
+    <script>
+        function toggleDarkMode() {
+            var body = document.querySelector('body');
+            body.classList.toggle('dark-mode');
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -47,6 +59,8 @@
             <p>Volume: 1000</p>
             <p>Market Cap: $1,000,000</p>
         </div>
+        
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
 </body>
 </html>

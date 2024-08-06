@@ -32,14 +32,17 @@ const StockDetail = () => {
         >
             {stockDetail ? (
                 <div className="container">
-                 <h1>Finance Detail Page</h1>
+                 <h1
+                    className="fw-bold"
+                 >Finance Detail Page</h1>
                  
                  <div className="stock-info">
-                     <h2>
-                        {stockDetail.symbol} - {stockDetail.longName}
+                     <h2 className='fw-bold'>
+                        {stockDetail.longName} ({stockDetail.symbol})
                      </h2>
                      <p>Symbol: XYZ</p>
-                     <p>Price: $100</p>
+                     <p>Price: ${stockDetail.price}
+                     </p>
                      <p>Volume: 1000</p>
                      <p>Market Cap: $1,000,000</p>
                  </div>

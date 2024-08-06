@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import './home.css'
+import SearchBar from '../../components/searchBar/SearchBar'
 
 export default function Home() {
     const [stocks, setStocks] = React.useState([])
-    
+
     function updateFavorite(stock) {
         fetch(`https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks/${stock.id}`, {
             method: 'PUT',
@@ -29,7 +30,7 @@ export default function Home() {
             .catch(error => {
                 console.error('Error:', error)
             })
-        }
+    }
 
     useEffect(() => {
         fetch('https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks')
@@ -46,73 +47,81 @@ export default function Home() {
                 console.log(error)
             })
 
-            setInterval(() => {
-                setStocks(prevStocks => {
-                    const updatedStocks = prevStocks.map(stock => {
-                        // generate a random number between -5 and 5
-                        const randomChange = (Math.random() * 10) - 5
-                        const updatedPrice = parseFloat((stock.price + randomChange).toFixed(2))
+        setInterval(() => {
+            setStocks(prevStocks => {
+                const updatedStocks = prevStocks.map(stock => {
+                    // generate a random number between -5 and 5
+                    const randomChange = (Math.random() * 10) - 5
+                    const updatedPrice = parseFloat((stock.price + randomChange).toFixed(2))
 
-                        return {
-                            ...stock,
-                            price: updatedPrice,
-                            change: randomChange
-                        }
-                    })
-
-                    return updatedStocks;
+                    return {
+                        ...stock,
+                        price: updatedPrice,
+                        change: randomChange
+                    }
                 })
-            }, 5000)
+
+                return updatedStocks;
+            })
+        }, 5000)
     }
         , [])
 
     return (
         <div className="container">
-            <div class="input-group mt-3 w-50 mx-auto">
-                <input type="text" class="form-control shadow-none" placeholder="Search for news, symbols or companies" aria-label="Search for stocks" aria-describedby="button-addon2" />
-                <button class="btn btn-primary" type="button" id="button-addon2">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-            <h1>Welcome to Stock Homepage</h1>
-            <p>Check out the latest stock information below:</p>
-            <div className="row">
-                {
-                    stocks.map(stock => (
-                        <div key={stock.id} className="stock col-6 col-md-4 col-lg-3" data-aos="fade-right">
-                            {/* <div className="stock-image">
-                                <img src={stock.image} alt="Stock Image" />
-                            </div>
-                            <div className="stock-info">
-                                <h2 className="stock-name">
-                                    {stock.symbol}
-                                </h2>
-                                <div className="stock-price">
-                                    <p className="price">{stock.price}</p>
-                                    <p className= {`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
+            <SearchBar />
+            <div className="mt-5
+                pt-5
+            "
+            >
+                <h1>Welcome to Stock Homepage</h1>
+                <p>Check out the latest stock information below:</p>
+                <div className="row">
+                    {
+                        stocks.map(stock => (
+                            <div key={stock.id} className="stock col-6 col-md-4 col-lg-3" data-aos="fade-right"
+                                onClick={function (event) {
+                                    if (event.target.className.includes('fa-heart')) {
+                                        return
+                                    }
+
+                                    window.location.href = `/quote/${stock.id}`
+                                }}
+                            >
+                                {/* <div className="stock-image">
+                                    <img src={stock.image} alt="Stock Image" />
                                 </div>
-                            </div> */}
-                            <div className='stock-info'>
-                                <p className='symbol'>{stock.symbol} - {stock.longName}
-                                </p>
-                                <p className='price'>${stock.price}</p>
-                                <p className={`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
-                                {stock.favorite ?
-                                    <i className="fa-solid fa-heart"
-                                        onClick={() => {
-                                            updateFavorite(stock)
-                                        }}
-                                    ></i>
-                                    :
-                                    <i className="fa-regular fa-heart"
-                                        onClick={() => {
-                                            updateFavorite(stock)
-                                        }}
-                                    ></i>}
+                                <div className="stock-info">
+                                    <h2 className="stock-name">
+                                        {stock.symbol}
+                                    </h2>
+                                    <div className="stock-price">
+                                        <p className="price">{stock.price}</p>
+                                        <p className= {`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
+                                    </div>
+                                </div> */}
+                                <div className='stock-info'>
+                                    <p className='symbol'>{stock.symbol} - {stock.longName}
+                                    </p>
+                                    <p className='price'>${stock.price}</p>
+                                    <p className={`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
+                                    {stock.favorite ?
+                                        <i className="fa-solid fa-heart"
+                                            onClick={() => {
+                                                updateFavorite(stock)
+                                            }}
+                                        ></i>
+                                        :
+                                        <i className="fa-regular fa-heart"
+                                            onClick={() => {
+                                                updateFavorite(stock)
+                                            }}
+                                        ></i>}
+                                </div>
                             </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
+import './styles.css'
 import StockDetail from './pages/stockDetail/StockDetail'
 
 export default function App() {
@@ -9,7 +10,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/stock/:symbol' element={<StockDetail />} />
+          <Route path='/quote/:symbol' element={<StockDetail />} />
           {/* // a few routes for a stock site 
           <Route path='/stock' element={<Stock />} />
           <Route path='/stock/:symbol/chart' element={<StockChart />} />
