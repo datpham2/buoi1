@@ -21,13 +21,12 @@ export default function SearchBar() {
                 searchResult.innerHTML = '';
                 searchResults.forEach((result) => {
                     console.log('result', result);
-                    const resultDiv = document.createElement('li');
-                    resultDiv.className = 'list-group-item';
-                    resultDiv.innerText = `${result.longName} (${result.symbol})
-                    `;
-                    searchResult.appendChild(resultDiv);
-                    resultDiv.addEventListener('click', () => {
-                        console.log('clicked', result);
+                    const resultLi = document.createElement('li');
+                    resultLi.className = 'list-group-item z-3 bg-light text-dark';
+                    resultLi.innerHTML = `<p class="text-primary">${result.symbol}</p><p>${result.longName}</p>`;
+                    searchResult.appendChild(resultLi);
+                    resultLi.addEventListener('click', () => {
+                        window.location.href = `/quote/${result.id}`;
                     });
                 });
             })
@@ -38,7 +37,8 @@ export default function SearchBar() {
 
     return (
         <div className='search-bar w-100
-        position-absolute top-0 start-50 translate-middle-x mt-4
+        position-absolute top-0 start-50 translate-middle-x mt-4 
+                z-1
 '>
             <div className="input-group mt-3 w-50 mx-auto">
                 <input type="text" className="form-control shadow-none" placeholder="Search for news, symbols or companies" aria-label="Search for stocks" aria-describedby="button-addon2"

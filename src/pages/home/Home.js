@@ -68,7 +68,8 @@ export default function Home() {
         , [])
 
     return (
-        <div className="container">
+        <div className="container
+        ">
             <SearchBar />
             <div className="mt-5
                 pt-5
@@ -79,7 +80,9 @@ export default function Home() {
                 <div className="row">
                     {
                         stocks.map(stock => (
-                            <div key={stock.id} className="stock col-6 col-md-4 col-lg-3" data-aos="fade-right"
+                            <div key={stock.id} className="stock col-6 col-md-4 col-lg-3
+                              
+                            " data-aos="fade-right"
                                 onClick={function (event) {
                                     if (event.target.className.includes('fa-heart')) {
                                         return
