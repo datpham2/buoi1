@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+
+import './detail.css';
 import { useParams } from 'react-router-dom';
 
 
@@ -25,14 +27,23 @@ const StockDetail = () => {
     }, [symbol]);
 
     return (
-        <div>
+        <div
+            className='stock-detail'
+        >
             {stockDetail ? (
-                <div>
-                    <h2>{stockDetail.name}</h2>
-                    <p>Symbol: {stockDetail.symbol}</p>
-                    <p>Price: {stockDetail.price}</p>
-                    {/* Render other stock details */}
-                </div>
+                <div className="container">
+                 <h1>Finance Detail Page</h1>
+                 
+                 <div className="stock-info">
+                     <h2>
+                        {stockDetail.symbol} - {stockDetail.longName}
+                     </h2>
+                     <p>Symbol: XYZ</p>
+                     <p>Price: $100</p>
+                     <p>Volume: 1000</p>
+                     <p>Market Cap: $1,000,000</p>
+                 </div>
+             </div>
             ) : (
                 <p>Loading stock detail...</p>
             )}

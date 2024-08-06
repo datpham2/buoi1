@@ -54,11 +54,29 @@
         .fa-heart.favorite {
             color: red;
         }
+
+        .search-bar {
+            margin-top: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <h1>Stock Detail</h1>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
 
     <div class="stock-info">
         <p class="symbol">AAPL - Apple Inc.</p>

@@ -1,0 +1,31 @@
+Add your custom CSS styles here
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.stock-detail .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.stock-detail .container h1 {
+    text-align: center;
+}
+
+.stock-detail .container .stock-info {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.stock-detail .container .stock-info h2 {
+    margin-top: 0;
+}
+
+.stock-detail .container .stock-info .stock-info p {
+    margin-bottom: 10px;
+}

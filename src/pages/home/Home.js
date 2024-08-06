@@ -46,34 +46,6 @@ export default function Home() {
                 console.log(error)
             })
 
-            
-
-            // setInterval(() => {
-            //     setStocks(prevStocks => {
-            //         const updatedStocks = prevStocks.map(stock => {
-            //             // generate a random number between -20 and 20
-            //             const randomChange = (Math.random() * 40) - 20
-            //             const updatedPrice = parseFloat((stock.price + randomChange).toFixed(2))
-
-            //             return {
-            //                 ...stock,
-            //                 price: updatedPrice,
-            //                 change: randomChange
-            //             }
-            //         })
-
-            //         let changeElements = document.querySelectorAll('.container .stock .stock-info .stock-price .change')
-
-            //         for (let i = 0; i < updatedStocks.length; i++) {
-            //             changeElements[i].innerText = `${updatedStocks[i].change > 0 ? '+' : '-'}${Math.abs(updatedStocks[i].change).toFixed(2)}` 
-            //             changeElements[i].classList.toggle('negative', updatedStocks[i].change < 0)
-            //         }
-
-
-            //         return updatedStocks;
-            //     })
-            // }, 4000)
-
             setInterval(() => {
                 setStocks(prevStocks => {
                     const updatedStocks = prevStocks.map(stock => {
@@ -90,19 +62,24 @@ export default function Home() {
 
                     return updatedStocks;
                 })
-            }, 4000)
+            }, 5000)
     }
         , [])
 
     return (
-        <div>
+        <div className="container">
+            <div class="input-group mt-3 w-50 mx-auto">
+                <input type="text" class="form-control shadow-none" placeholder="Search for news, symbols or companies" aria-label="Search for stocks" aria-describedby="button-addon2" />
+                <button class="btn btn-primary" type="button" id="button-addon2">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
             <h1>Welcome to Stock Homepage</h1>
             <p>Check out the latest stock information below:</p>
-            <div className="
-            ">
+            <div className="row">
                 {
                     stocks.map(stock => (
-                        <div key={stock.id} className="stock" data-aos="fade-right">
+                        <div key={stock.id} className="stock col-6 col-md-4 col-lg-3" data-aos="fade-right">
                             {/* <div className="stock-image">
                                 <img src={stock.image} alt="Stock Image" />
                             </div>
@@ -121,17 +98,17 @@ export default function Home() {
                                 <p className='price'>${stock.price}</p>
                                 <p className={`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
                                 {stock.favorite ?
-                                <i className="fa-solid fa-heart"
-                                    onClick={() => {
-                                        updateFavorite(stock)
-                                    }}
-                                ></i>
-                                :
-                                <i className="fa-regular fa-heart"
-                                    onClick={() => {
-                                        updateFavorite(stock)
-                                    }}
-                                ></i>}
+                                    <i className="fa-solid fa-heart"
+                                        onClick={() => {
+                                            updateFavorite(stock)
+                                        }}
+                                    ></i>
+                                    :
+                                    <i className="fa-regular fa-heart"
+                                        onClick={() => {
+                                            updateFavorite(stock)
+                                        }}
+                                    ></i>}
                             </div>
                         </div>
                     ))
