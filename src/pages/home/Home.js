@@ -79,11 +79,10 @@ export default function Home() {
             >
                 <h1>Welcome to Stock Homepage</h1>
                 <p>Check out the latest stock information below:</p>
-                <div className="row">
+                <div className="row bg-image hover-overlay">
                     {
                         stocks.map(stock => (
                             <div key={stock.id} className="stock col-6 col-md-4 col-lg-3
-                              
                             " data-aos="fade-right"
                                 onClick={function (event) {
                                     if (event.target.className.includes('fa-heart')) {
@@ -99,7 +98,7 @@ export default function Home() {
                                         </p>
                                         <p className='price'>${stock.price}</p>
                                         <p className={`change ${stock.change > 0 ? '' : 'negative'}`}>{stock.change > 0 ? '+' : ''}{stock.change.toFixed(2)} ({stock.change > 0 ? '+' : ''}{(stock.change / stock.price * 100).toFixed(2)}%)</p>
-                                        
+
                                     </div>
                                     <div className='chart'>
                                         <img src={
@@ -107,20 +106,20 @@ export default function Home() {
                                         } alt="chart"
                                             width="100%"
                                             height="100%"
-                                        />  
+                                        />
                                     </div>
                                     {stock.favorite ?
-                                            <i className="fa-solid fa-heart"
-                                                onClick={() => {
-                                                    updateFavorite(stock)
-                                                }}
-                                            ></i>
-                                            :
-                                            <i className="fa-regular fa-heart"
-                                                onClick={() => {
-                                                    updateFavorite(stock)
-                                                }}
-                                            ></i>}
+                                        <i className="fa-solid fa-heart"
+                                            onClick={() => {
+                                                updateFavorite(stock)
+                                            }}
+                                        ></i>
+                                        :
+                                        <i className="fa-regular fa-heart"
+                                            onClick={() => {
+                                                updateFavorite(stock)
+                                            }}
+                                        ></i>}
                                 </div>
                             </div>
                         ))
