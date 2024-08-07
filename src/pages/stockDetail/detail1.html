@@ -1,66 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Finance Detail Page</title>
+    <title>Stock Detail</title>
     <style>
-        /* Add your custom CSS styles here */
+        /* CSS styles go here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
             padding: 20px;
         }
-        
+
         h1 {
-            text-align: center;
+            color: #333;
+            font-size: 24px;
         }
-        
+
         .stock-info {
             margin-top: 20px;
             border: 1px solid #ccc;
             padding: 20px;
-            border-radius: 5px;
+            background-color: #f9f9f9;
         }
-        
+
         .stock-info h2 {
-            margin-top: 0;
+            color: #666;
+            font-size: 18px;
         }
-        
+
         .stock-info p {
-            margin-bottom: 10px;
-        }
-        
-        /* Dark mode styles */
-        .dark-mode {
-            background-color: #333;
-            color: #fff;
+            color: #999;
+            font-size: 14px;
         }
     </style>
-    <script>
-        function toggleDarkMode() {
-            var body = document.querySelector('body');
-            body.classList.toggle('dark-mode');
-        }
-    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Finance Detail Page</h1>
-        
-        <div class="stock-info">
-            <h2>Stock Name</h2>
-            <p>Symbol: XYZ</p>
-            <p>Price: $100</p>
-            <p>Volume: 1000</p>
-            <p>Market Cap: $1,000,000</p>
-        </div>
-        
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <h1>Stock Detail</h1>
+
+    <div class="stock-info">
+        <h2>Stock Name</h2>
+        <p>Stock Symbol: XYZ</p>
+        <p>Current Price: $100</p>
+        <p>Market Cap: $1 billion</p>
+        <p>Volume: 100,000</p>
+        <!-- Add more stock information here -->
     </div>
 </body>
 </html>

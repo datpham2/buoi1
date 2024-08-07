@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import './detail.css';
+import img0 from '../../chart0.webp';
+import img1 from '../../chart1.png';
 import { useParams } from 'react-router-dom';
 import SearchBar from '../../components/searchBar/SearchBar';
 
@@ -48,6 +50,12 @@ const StockDetail = () => {
                      <p>Volume: 1000</p>
                      <p>Market Cap: $1,000,000</p>
                  </div>
+
+                    <div className="stock-chart">
+                        <img src={
+                            img0
+                        } alt="Stock Chart" />
+                    </div>
              </div>
             ) : (
                 <p>Loading stock detail...</p>

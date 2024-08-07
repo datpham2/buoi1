@@ -70,7 +70,7 @@ export default function Home() {
         , [])
 
     return (
-        <div className="container
+        <div className="container home
         ">
             <SearchBar />
             <div className="mt-5

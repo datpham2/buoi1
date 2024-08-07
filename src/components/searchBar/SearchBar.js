@@ -18,19 +18,32 @@ export default function SearchBar() {
                 h3.innerHTML = 'Trending Tickers';
                 searchResult.appendChild(h3);
                 const stockLi = document.createElement('li');
-                stockLi.className = 'list-group-item d-flex flex-wrap align-items-center z-3 bg-white text-dark border-0';
+                stockLi.className = 'list-group-item d-flex flex-wrap align-items-center z-3 bg-white text-dark border-0 p-1';
                 stockLi.style.cursor = 'pointer';
+                stockLi.style.fontSize = '0.8rem';
                 data.forEach((stock) => {
                     const div = document.createElement('div');
-                    div.className = 'd-flex align-items-center col-lg-3 col-md-4 col-sm-12 col-12'
+                    div.className = 'd-flex align-items-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 mx-1 my-1 bg-white text-dark border-0 rounded-4 shadow-sm'
                     div.innerHTML = `
                     <div
                         class="rounded-circle bg-secondary opacity-50 text-white d-flex justify-content-center align-items-center"
-                        style="width: 18px; height: 18px;"
-                    ><small>${stock.symbol[0]}</small></div>
-                    <div><small class="fw-bold text-secondary mx-1">${stock.symbol}</small></div>
-                    <div><small class="mx-1">${stock.price}</small></div>
+                        style="width: 17px; height: 17px;"
+                    >${stock.symbol[0]}</div>
+                    <div class="fw-bold text-secondary mx-1">${stock.symbol}</div>
+                    <div class="mx-1">${stock.price}</div>
+                    <div class="change"><small class="mx-1"
+                        style="color: ${stock.change > 0 ? 'green' : 'red'}"
+                    >(${
+                        stock.change > 0 ? '+' + stock.change.toFixed(2)
+                        : '' +
+                        stock.change.toFixed(2)
+
+                    })</small></div>
                     `;
+                    /* add onclick event */
+                    div.addEventListener('click', () => {
+                        window.location.href = `/quote/${stock.id}`;
+                    });
                     stockLi.appendChild(div);
                 });
 

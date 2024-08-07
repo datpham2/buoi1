@@ -10,55 +10,55 @@ h1 {
     font-size: 24px;
 }
 
-.stock:hover {
+.home .stock:hover {
     cursor: pointer;
 }
 
-.stock-info {
+.home .stock-info {
     margin-top: 20px;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
 }
 
-.stock-info {
+.home .stock-info {
     transition: transform 0.5s;
 }
 
-.stock-info:hover {
+.home .stock-info:hover {
     transform: scale(1.1);
 }
 
-.stock-info p {
+.home .stock-info p {
     margin: 0;
     color: black;
 }
 
-.stock-info .symbol {
+.home .stock-info .symbol {
     font-weight: bold;
     font-size: 18px;
 }
 
-.stock-info .price {
+.home .stock-info .price {
     font-size: 24px;
     margin-top: 10px;    
 }
 
-.stock-info .change {
+.home .stock-info .change {
     color: green;
 }
 
-.stock-info .change.negative {
+.home .stock-info .change.negative {
     color: red;
 }
 
-.fa-regular.fa-heart {
+.home .fa-regular.fa-heart {
     color: #ccc;
     font-size: 24px;
     cursor: pointer;
 }
 
-.fa-solid.fa-heart {
+.home .fa-solid.fa-heart {
     color: red;
     font-size: 24px;
     cursor: pointer;
