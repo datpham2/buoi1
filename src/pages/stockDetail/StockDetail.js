@@ -5,6 +5,7 @@ import img0 from '../../chart0.webp';
 import img1 from '../../chart1.png';
 import { useParams } from 'react-router-dom';
 import SearchBar from '../../components/searchBar/SearchBar';
+import Articles from '../../components/articles/Articles';
 
 
 const StockDetail = () => {
@@ -56,6 +57,7 @@ const StockDetail = () => {
                             img0
                         } alt="Stock Chart" />
                     </div>
+                    <Articles stockSymbol={symbol} />
              </div>
             ) : (
                 <p>Loading stock detail...</p>

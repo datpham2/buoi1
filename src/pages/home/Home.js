@@ -35,6 +35,7 @@ export default function Home() {
     }
 
     useEffect(() => {
+
         fetch('https://66a08cbc7053166bcabbc9a5.mockapi.io/stocks')
             .then(res => res.json())
             .then(function (data) {
