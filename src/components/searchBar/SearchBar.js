@@ -22,8 +22,15 @@ export default function SearchBar() {
                 stockLi.style.cursor = 'pointer';
                 data.forEach((stock) => {
                     const div = document.createElement('div');
-                    div.className = 'd-flex flex-start w-25';
-                    div.innerHTML = `<p class="text-primary"><small>${stock.symbol}</small></p> <p><small class="text-secondary mx-1">${stock.longName}</small></p>`;
+                    div.className = 'd-flex align-items-center col-lg-3 col-md-4 col-sm-12 col-12'
+                    div.innerHTML = `
+                    <div
+                        class="rounded-circle bg-secondary opacity-50 text-white d-flex justify-content-center align-items-center"
+                        style="width: 18px; height: 18px;"
+                    ><small>${stock.symbol[0]}</small></div>
+                    <div><small class="fw-bold text-secondary mx-1">${stock.symbol}</small></div>
+                    <div><small class="mx-1">${stock.price}</small></div>
+                    `;
                     stockLi.appendChild(div);
                 });
 
