@@ -11,23 +11,23 @@ export default function SearchBar() {
             .then((response) => response.json())
             .then((data) => {
                 const searchResult = document.getElementById('result');
-                searchResult.classList.add('d-flex');
                 searchResult.innerHTML = '';
                 /* add h3 element */
                 const h3 = document.createElement('h3');
                 h3.className = 'z-3 bg-white fs-6 fw-bold text-dark mt-2 mb-0 p-2 trending-tickers';
                 h3.innerHTML = 'Trending Tickers';
                 searchResult.appendChild(h3);
-                data.forEach((result) => {
-                    const resultLi = document.createElement('li');
-                    resultLi.className = 'list-group-item z-3 bg-white text-dark border-0';
-                    resultLi.style.cursor = 'pointer';
-                    resultLi.innerHTML = `<span><small class="fw-bold">${result.symbol}</small></span> <span><small class="text-secondary">${result.price}</small></span>`;
-                    searchResult.appendChild(resultLi);
-                    resultLi.addEventListener('click', () => {
-                        window.location.href = `/quote/${result.id}`;
-                    });
+                const stockLi = document.createElement('li');
+                stockLi.className = 'list-group-item d-flex flex-wrap align-items-center z-3 bg-white text-dark border-0';
+                stockLi.style.cursor = 'pointer';
+                data.forEach((stock) => {
+                    const div = document.createElement('div');
+                    div.className = 'd-flex flex-start w-25';
+                    div.innerHTML = `<p class="text-primary"><small>${stock.symbol}</small></p> <p><small class="text-secondary mx-1">${stock.longName}</small></p>`;
+                    stockLi.appendChild(div);
                 });
+
+                searchResult.appendChild(stockLi);
             })
             .catch((error) => {
                 console.error('Error:', error);
