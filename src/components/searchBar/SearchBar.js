@@ -24,7 +24,7 @@ export default function SearchBar() {
                     const resultLi = document.createElement('li');
                     resultLi.className = 'list-group-item z-3 bg-light text-dark';
                     resultLi.style.cursor = 'pointer';
-                    resultLi.innerHTML = `<p class="text-primary">${result.symbol}</p><p>${result.longName}</p>`;
+                    resultLi.innerHTML = `<p class="text-primary"><small>${result.symbol}</small></p><p><small class="text-secondary">${result.longName}</small></p>`;
                     searchResult.appendChild(resultLi);
                     resultLi.addEventListener('click', () => {
                         window.location.href = `/quote/${result.id}`;
