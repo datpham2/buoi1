@@ -2,7 +2,9 @@ import React, { useEffect } from 'react'
 import './home.css'
 import img0 from '../../chart0.webp'
 import img1 from '../../chart1.png'
+import ad0 from '../../event.PNG'
 import SearchBar from '../../components/searchBar/SearchBar'
+import AboutUs from '../../components/aboutUs/AboutUs'
 
 export default function Home() {
     const [stocks, setStocks] = React.useState([])
@@ -67,12 +69,36 @@ export default function Home() {
                 return updatedStocks;
             })
         }, 5000)
+
+        // display ad-container, and display ad-content in the center horizontally and vertically after 3 seconds
+        setTimeout(() => {
+            document.querySelector('.ad-container').style.display = 'flex'
+            document.body.style.overflow = 'hidden'
+        }, 3000)
+
+        
+        // when the user clicks on the close-ad button, hide the ad-container
+        document.querySelector('.close-ad').addEventListener('click', () => {
+            document.querySelector('.ad-container').style.display = 'none'
+            document.body.style.overflow = 'auto'
+        })
     }
         , [])
 
     return (
         <div className="container home
         ">
+            <div class="ad-container">
+                <div class="ad-content">
+                    <a href="#">
+                        <div>
+                            <img src={ad0}
+                        alt="Ad" />
+                        <div class="close-ad">x</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <SearchBar />
             <div className="mt-5
                 pt-5
@@ -83,7 +109,7 @@ export default function Home() {
                 <div className="row bg-image hover-overlay">
                     {
                         stocks.map(stock => (
-                            <div key={stock.id} className="stock col-6 col-md-4 col-lg-3
+                            <div key={stock.id} className="stock col-6 col-md-4 col-lg-3 text-lg-start text-sm-start text-md-start text-xl-start text-xxl-start
                             " data-aos="fade-right"
                                 onClick={function (event) {
                                     if (event.target.className.includes('fa-heart')) {

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Style for the ad container */
+        .ad-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            z-index: 9999;
+            /* Make sure the ad is on top of other elements */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ad-container img {
+            width: 500px;
+            height: 500px;
+
+        }
+
+        /* Style for the ad content */
+        .ad-content {
+            border-radius: 5px;
+        }
+
+        .ad-content div {
+            position: relative;
+        }
+
+        .ad-content button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: white;
+            opacity: 0;
+            border: none;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        /* Style for the navigation button */
+        .navigation-button {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            animation: moveRight 0.5s infinite alternate;
+        }
+
+        @keyframes moveRight {
+            0% {
+                right: 20px;
+            }
+
+            100% {
+                right: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ad-container">
+        <div class="ad-content">
+            <a>
+                <div>
+                    <img src="https://ktc.likelion.edu.vn/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdk3pxmymh%2Fimage%2Fupload%2Fv1720411086%2Flikelion%2Fktc-jobfair-landing%2FPopup_chu%25CC%259Bo%25CC%259Bng_tri%25CC%2580nh_gwzc20.png&w=1920&q=75"
+                        alt="Ad" />
+                    <!-- X button to close the ad -->
+                    <div class="close-ad">X</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation button -->
+    <a href="new-page.html" class="navigation-button btn btn-primary"><i class="fa-solid fa-chevron-right"></i></a>
+
+    <!-- Rest of your page content goes here -->
+    <h2>About Us</h2>
+    <p>This is the about us page content.</p>
+    <script>
+        // click outside the ad to close it
+        document.querySelector('.ad-container').addEventListener('click', function (event) {
+            if (event.target.classList.contains('ad-container')) {
+                document.querySelector('.ad-container').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
