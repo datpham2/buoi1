@@ -111,3 +111,24 @@ h1 {
     top: 10px;
     right: 10px;
 }
+
+/* Style for the navigation button */
+.fa-chevron-right {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    animation: moveRight 1s infinite alternate;
+    cursor: pointer;
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+@keyframes moveRight {
+    0% {
+        right: 20px;
+    }
+
+    100% {
+        right: 40px;
+    }
+}

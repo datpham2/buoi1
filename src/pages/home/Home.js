@@ -76,7 +76,7 @@ export default function Home() {
             document.body.style.overflow = 'hidden'
         }, 3000)
 
-        
+
         // when the user clicks on the close-ad button, hide the ad-container
         document.querySelector('.close-ad').addEventListener('click', () => {
             document.querySelector('.ad-container').style.display = 'none'
@@ -93,8 +93,8 @@ export default function Home() {
                     <a href="#">
                         <div>
                             <img src={ad0}
-                        alt="Ad" />
-                        <div class="close-ad">x</div>
+                                alt="Ad" />
+                            <div class="close-ad">x</div>
                         </div>
                     </a>
                 </div>
@@ -153,6 +153,7 @@ export default function Home() {
                     }
                 </div>
             </div>
+            <i class="fa-solid fa-chevron-right"></i>
         </div>
     )
 }
