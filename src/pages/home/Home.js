@@ -98,7 +98,7 @@ export default function Home() {
                         </div>
                 </div>
             </div>
-            <SearchBar />
+            <SearchBar stocks={stocks} />
             <div className="mt-5
                 pt-5 current-content
             "
@@ -158,14 +158,9 @@ export default function Home() {
                     document.querySelector('.search-bar').classList.toggle('hidden')
                 }}
             ></i>
-            {/* <div 
-                className='new-content'
-            >
-                <h1>New Content</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, varius dolor. Donec pellentesque, eros a tincidunt consectetur, erat turpis bibendum dolor, a efficitur arcu neque in turpis. Mauris nec nisi nec nunc ultrices suscipit. Nulla facilisi. Nulla nec purus feugiat, molestie ipsum et, varius dolor. Donec pellentesque, eros a tincidunt consectetur, erat turpis bibendum dolor, a efficitur arcu neque in turpis. Mauris nec nisi nec nunc ultrices suscipit. Nulla facilisi.
-                </p>
-            </div> */}
+            <div className='new-content'>
+                TODO
+            </div>
         </div>
     )
 }

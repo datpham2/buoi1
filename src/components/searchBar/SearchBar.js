@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './searchBar.css';
 
-export default function SearchBar() {
+export default function SearchBar(props) {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const inputRef = useRef(null);
@@ -22,7 +22,7 @@ export default function SearchBar() {
                 stockLi.className = 'list-group-item d-flex flex-wrap align-items-center z-3 bg-white text-dark border-0 p-1';
                 stockLi.style.cursor = 'pointer';
                 stockLi.style.fontSize = '0.8rem';
-                data.forEach((stock) => {
+                props.stocks.forEach((stock) => {
                     const div = document.createElement('div');
                     div.className = 'd-flex align-items-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 mx-1 my-1 bg-white text-dark border-0 rounded-4 shadow-sm'
                     div.innerHTML = `
@@ -93,6 +93,7 @@ export default function SearchBar() {
             if (inputRef.current && !inputRef.current.contains(event.target)
                 && /* not the element with the className 'close-ad' */ !document.getElementsByClassName('close-ad')[0].contains(event.target)
                 && /* not the element with the className 'fa-chevron-right' */ !document.getElementsByClassName('fa-chevron-right')[0].contains(event.target)
+                && document.querySelector('.ad-container').style.display !== 'flex'
             ) {
                 const listGroupItems = document.getElementsByClassName('list-group-item');
                 if (document.getElementsByClassName('trending-tickers').length > 0) {
