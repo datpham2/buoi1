@@ -90,7 +90,10 @@ export default function SearchBar() {
 
     useEffect(() => {
         function handleClickOutside(event) {
-            if (inputRef.current && !inputRef.current.contains(event.target)) {
+            if (inputRef.current && !inputRef.current.contains(event.target)
+                && /* not the element with the className 'close-ad' */ !document.getElementsByClassName('close-ad')[0].contains(event.target)
+                && /* not the element with the className 'fa-chevron-right' */ !document.getElementsByClassName('fa-chevron-right')[0].contains(event.target)
+            ) {
                 const listGroupItems = document.getElementsByClassName('list-group-item');
                 if (document.getElementsByClassName('trending-tickers').length > 0) {
                     document.getElementsByClassName('trending-tickers')[0].remove();

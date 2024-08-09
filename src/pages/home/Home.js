@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './home.css'
 import img0 from '../../chart0.webp'
 import img1 from '../../chart1.png'
-import ad0 from '../../event.PNG'
+import ad0 from '../../ad0.jpg'
 import SearchBar from '../../components/searchBar/SearchBar'
 
 export default function Home() {
@@ -90,7 +90,7 @@ export default function Home() {
             <div className="ad-container">
                 <div className="ad-content">
                         <div>
-                            <a>
+                            <a href="#">
                                 <img src={ad0}
                                     alt="Ad" />
                             </a>
