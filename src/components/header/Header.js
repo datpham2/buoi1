@@ -51,6 +51,8 @@ export default function Header() {
                 window.addEventListener('resize', () => {
                     if (window.innerWidth >= 992) {
                         document.querySelector('.dropdown-menu').style.display = 'none';
+                        document.querySelector('.fa-x').style.display = 'none';
+                        document.querySelector('.navbar-toggler-icon').style.display = 'block';
                     }
                 });
             }
@@ -121,7 +123,7 @@ export default function Header() {
             <div className="dropdown-menu">
                 <form action="{% url 'search' %}" className="dropdown-item d-flex search" id="search-dropdown-menu" method="get">
                     <input id="search-sort-dropdown" name="sort" type="hidden" value="best" />
-                    <input className="form-control me-2" id="search-query-dropdown" name="query" type="search" placeholder="Search" aria-label="Search" />
+                    <input autoComplete="off" className="form-control me-2" id="search-query-dropdown" name="query" type="search" placeholder="Search" aria-label="Search" />
                     <button className="btn btn-light" id="submit-dropdown" type="submit">
                         <i className="fas fa-search"></i>
                     </button>
