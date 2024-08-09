@@ -94,7 +94,7 @@ export default function Home() {
                                 <img src={ad0}
                                     alt="Ad" />
                             </a>
-                            <div className="close-ad">x</div>
+                            <div className="close-ad">&#215;</div>
                         </div>
                 </div>
             </div>
