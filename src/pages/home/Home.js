@@ -168,6 +168,37 @@ export default function Home() {
             
             <div className='new-content'>
                 <Header />
+                <div class="article">
+            <div class="date text-muted">
+                Dec. 15, 2021
+            </div>
+            <div class="article-post">
+                <div class="main">
+                    
+                    <p class="headline">
+                        <a href="/23">Coronavirus Briefing: Britain’s Omicron restrictions</a>
+                    </p>
+                    <p class="summary">
+                        <a href="/23">And the verdict on Pfizer’s Covid pill.</a>
+                    </p>
+                    <p class="reporters">
+                        <a href="/23">
+                            By
+                            
+                                
+                                    BAR 
+                                
+                            
+                        </a>
+                    </p>
+                </div>
+                <div class="image">
+                    <a href="/23">
+                        <img src="https://static01.nyt.com/images/2020/07/21/us/cases_orphan_usa-1595349567192-copy/cases_orphan_usa-1595349567192-jumbo-v1120.png?quality=75&amp;auto=webp" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
             </div>
         </div>
     )
