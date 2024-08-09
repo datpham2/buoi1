@@ -90,13 +90,13 @@ export default function Home() {
         ">
             <div className="ad-container">
                 <div className="ad-content">
-                        <div>
-                            <a href="#">
-                                <img src={ad0}
-                                    alt="Ad" />
-                            </a>
-                            <div className="close-ad">&#215;</div>
-                        </div>
+                    <div>
+                        <a href="#">
+                            <img src={ad0}
+                                alt="Ad" />
+                        </a>
+                        <div className="close-ad">&#215;</div>
+                    </div>
                 </div>
             </div>
             <SearchBar stocks={stocks} />
@@ -157,48 +157,48 @@ export default function Home() {
                 onClick={() => {
                     document.querySelector('.current-content').classList.toggle('hidden')
                     document.querySelector('.search-bar').classList.toggle('hidden')
-                    setTimeout(() => {
-                        document.querySelector('.new-content').style.display = 'block'
-                        document.querySelector('.new-content').style.width = '100vw'
-                        document.querySelector('.home').style.margin = '0'
-                        document.querySelector('.home').style.padding = '0'
-                    }, 3500)
+                    // eventually remove the i tag with the fa-chevron-right class
+                    document.querySelector('.fa-chevron-right').style.display = 'none'
+
+                    document.querySelector('.new-content').classList.toggle('show')
+                    document.querySelector('.home').style.margin = '0'
+                    document.querySelector('.home').style.padding = '0'
                 }}
             ></i>
-            
+
             <div className='new-content'>
                 <Header />
                 <div class="article">
-            <div class="date text-muted">
-                Dec. 15, 2021
-            </div>
-            <div class="article-post">
-                <div class="main">
-                    
-                    <p class="headline">
-                        <a href="/23">Coronavirus Briefing: Britain’s Omicron restrictions</a>
-                    </p>
-                    <p class="summary">
-                        <a href="/23">And the verdict on Pfizer’s Covid pill.</a>
-                    </p>
-                    <p class="reporters">
-                        <a href="/23">
-                            By
-                            
-                                
-                                    BAR 
-                                
-                            
-                        </a>
-                    </p>
+                    <div class="date text-muted">
+                        Dec. 15, 2021
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Coronavirus Briefing: Britain’s Omicron restrictions</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">And the verdict on Pfizer’s Covid pill.</a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAR
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://static01.nyt.com/images/2020/07/21/us/cases_orphan_usa-1595349567192-copy/cases_orphan_usa-1595349567192-jumbo-v1120.png?quality=75&amp;auto=webp" alt="" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="image">
-                    <a href="/23">
-                        <img src="https://static01.nyt.com/images/2020/07/21/us/cases_orphan_usa-1595349567192-copy/cases_orphan_usa-1595349567192-jumbo-v1120.png?quality=75&amp;auto=webp" alt="" />
-                    </a>
-                </div>
-            </div>
-        </div>
             </div>
         </div>
     )

@@ -174,8 +174,15 @@ h1 {
 } */
 
 .new-content {
-    display: none;
+    display: block;
     /* make the content start from the top of the page */
     position: absolute;
     top: 0;
+    left: 1920px;
+    transition: left 3.5s;
+}
+
+.new-content.show {
+    left: 0px;
+    width: 100vw;
 }
