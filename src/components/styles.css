@@ -142,9 +142,9 @@
 }
 
 .navbar {
-    background: #fff !important;
-    border-bottom: 1px solid #cecece;
-    margin-right: 1px;
+    /* background: #fff !important; */
+    /* border-bottom: 1px solid #cecece;
+    margin-right: 1px; */
 }
 
 .new-content .navbar-brand {    

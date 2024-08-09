@@ -7,18 +7,18 @@ export default function Header() {
         if (window.innerWidth <= 1920 && window.innerWidth > 1248) {
             document.querySelector('#search-navbar').style.visibility = 'visible';
             document.querySelector('.navbar-nav').style.marginRight = '0px';
-    
+
             // Hide the X sign and show the bar sign
             document.querySelector('.fa-x').style.display = 'none';
             document.querySelector('.navbar-toggler-icon').style.display = 'block';
-        } 
-        
+        }
+
         // I don't want the search form to be hiden away after less 1248
         else if (window.innerWidth >= 991 && window.innerWidth <= 1248) {
             document.querySelector('#search-navbar').style.visibility = 'visible';
             document.querySelector('.navbar-nav').style.marginRight = '10%';
-    
-             // Hide the X sign and show the bar sign
+
+            // Hide the X sign and show the bar sign
             document.querySelector('.fa-x').style.display = 'none';
             document.querySelector('.navbar-toggler-icon').style.display = 'block';
         } else {
@@ -82,7 +82,7 @@ export default function Header() {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand fs-4" href="/">KITS Finance</a>
+                    <a className="navbar-brand fs-4" href="/"><a class="navbar-brand" href="/"><span class="blue">K</span><span class="yellow">I</span><span class="green">T</span><span class="red">$</span> <span class="red">Finance</span></a></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                         <i className="fa-x"></i>

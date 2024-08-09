@@ -161,6 +161,7 @@ export default function Home() {
                         document.querySelector('.new-content').style.display = 'block'
                         document.querySelector('.new-content').style.width = '100vw'
                         document.querySelector('.home').style.margin = '0'
+                        document.querySelector('.home').style.padding = '0'
                     }, 3500)
                 }}
             ></i>
