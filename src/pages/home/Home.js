@@ -154,8 +154,8 @@ export default function Home() {
             </div>
             <i className="fa-solid fa-chevron-right"
                 onClick={() => {
-                    document.querySelector('.search-bar').classList.toggle('hidden')
                     document.querySelector('.current-content').classList.toggle('hidden')
+                    document.querySelector('.search-bar').classList.toggle('hidden')
                 }}
             ></i>
             {/* <div 

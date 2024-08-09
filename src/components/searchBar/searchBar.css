@@ -1,8 +1,10 @@
 .search-bar {
     left: 50%;
-    transition: 2.1s;
+    transition: 3.5s;
 }
 
 .search-bar.hidden {
-    left: -60%;
+    left: -44%;
 }
+
+/* search-bar and .current-content: -44% by -120% ratio, in 4s */
