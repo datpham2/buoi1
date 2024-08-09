@@ -74,7 +74,7 @@ export default function SearchBar(props) {
                 searchResults.forEach((result) => {
                     console.log('result', result);
                     const resultLi = document.createElement('li');
-                    resultLi.className = 'list-group-item z-3 bg-light text-dark';
+                    resultLi.className = 'list-group-item bg-light text-dark';
                     resultLi.style.cursor = 'pointer';
                     resultLi.innerHTML = `<p class="text-primary"><small>${result.symbol}</small></p><p><small class="text-secondary">${result.longName}</small></p>`;
                     searchResult.appendChild(resultLi);
@@ -137,7 +137,7 @@ export default function SearchBar(props) {
                     <i className="fas fa-search"></i>
                 </button>
             </div>
-            <ul className="list-group w-50 mx-auto shadow rounded-4" id="result">
+            <ul className="list-group w-50 mx-auto shadow rounded-bottom" id="result">
                 {/* <li class="list-group-item">Test</li>
                 <li class="list-group-item">Another Test</li>
                 <li class="list-group-item">Sample</li>

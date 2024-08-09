@@ -129,7 +129,7 @@
     flex-basis: 70%;
 }
 
-.main, #content, #summary, .main-search {
+.new-content .main, #content, #summary, .main-search {
     font-family: 'Merriweather', serif;
 }
 
@@ -147,7 +147,7 @@
     margin-right: 1px;
 }
 
-.navbar-brand {    
+.new-content .navbar-brand {    
     font-family: 'UnifrakturCook', cursive !important;
     font-size: 38px;
     font-weight: 800;
@@ -278,16 +278,10 @@
     color: #333;
 }
 
-#query::placeholder {
+.new-content #query::placeholder {
     color: #aaa;
     font-family: 'Roboto', sans-serif;;
     font-size: 22px;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
 }
 
 option {
@@ -298,7 +292,7 @@ option {
     font-style: italic;
 }
 
-h1, .heading {
+.new-content h1, .heading {
     font-family: 'Domine', serif;
 }
 

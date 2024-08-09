@@ -4,6 +4,7 @@ import img0 from '../../chart0.webp'
 import img1 from '../../chart1.png'
 import ad0 from '../../ad0.jpg'
 import SearchBar from '../../components/searchBar/SearchBar'
+import Header from '../../components/header/Header'
 
 export default function Home() {
     const [stocks, setStocks] = React.useState([])
@@ -156,10 +157,16 @@ export default function Home() {
                 onClick={() => {
                     document.querySelector('.current-content').classList.toggle('hidden')
                     document.querySelector('.search-bar').classList.toggle('hidden')
+                    setTimeout(() => {
+                        document.querySelector('.new-content').style.display = 'block'
+                        document.querySelector('.new-content').style.width = '100vw'
+                        document.querySelector('.home').style.margin = '0'
+                    }, 3500)
                 }}
             ></i>
+            
             <div className='new-content'>
-                TODO
+                <Header />
             </div>
         </div>
     )

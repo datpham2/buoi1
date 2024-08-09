@@ -80,6 +80,27 @@
           </div>
         
       </div>
+      <div class="dropdown-menu">
+        <form action="/search" class="dropdown-item d-flex search" id="search-dropdown-menu" method="get">
+          <input id="search-sort-dropdown" name="sort" type="hidden" value="best">
+          <input class="form-control me-2" id="search-query-dropdown" name="query" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-light" id="submit-dropdown" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <div class="dropdown-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </div>
+        
+          <div class="dropdown-item">
+            <a class="nav-link active" aria-current="page" href="/section/World">World</a>
+          </div>
+        
+          <div class="dropdown-item">
+            <a class="nav-link active" aria-current="page" href="/section/U.S.">U.S.</a>
+          </div>
+        
+      </div>
 </body>
 
 </html>

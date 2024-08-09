@@ -101,13 +101,13 @@ h1 {
 .home .ad-container img {
     width: 450px;
     height: 450px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /* Style for the ad content */
 .home .ad-content {
     border-radius: 5px;
-    padding: 8px;
+    padding: 12px;
     background-color: white;
     border-radius: 15px;
 }
@@ -118,8 +118,8 @@ h1 {
 
 .home .ad-content div .close-ad {
     position: absolute;
-    top: -4px;
-    right: 6px;
+    top: -2px;
+    right: 9px;
     color: white;
     font-size: 24px;
     cursor: pointer;
@@ -135,6 +135,7 @@ h1 {
 /* Style for the navigation button */
 .fa-chevron-right {
     position: fixed;
+    z-index: 9998;
     top: 50%;
     right: 20px;
     animation: moveRight 1s infinite alternate;
@@ -174,4 +175,7 @@ h1 {
 
 .new-content {
     display: none;
+    /* make the content start from the top of the page */
+    position: absolute;
+    top: 0;
 }
