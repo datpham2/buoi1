@@ -105,7 +105,7 @@ export default function Header() {
                         </ul>
                         <form action="/search" className="d-flex search" id="search-navbar" method="get">
                             <input id="search-sort-navbar" name="sort" type="hidden" value="best" />
-                            <input className="form-control me-2" id="search-query-navbar" name="query" type="search" placeholder="Search" aria-label="Search" />
+                            <input autoComplete="off" className="form-control me-2" id="search-query-navbar" name="query" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-light" id="submit-navbar" type="submit">
                                 <i className="fas fa-search"></i>
                             </button>
