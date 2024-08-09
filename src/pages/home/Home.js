@@ -4,7 +4,6 @@ import img0 from '../../chart0.webp'
 import img1 from '../../chart1.png'
 import ad0 from '../../event.PNG'
 import SearchBar from '../../components/searchBar/SearchBar'
-import AboutUs from '../../components/aboutUs/AboutUs'
 
 export default function Home() {
     const [stocks, setStocks] = React.useState([])
@@ -88,20 +87,20 @@ export default function Home() {
     return (
         <div className="container home
         ">
-            <div class="ad-container">
-                <div class="ad-content">
-                    <a href="#">
+            <div className="ad-container">
+                <div className="ad-content">
                         <div>
-                            <img src={ad0}
-                                alt="Ad" />
-                            <div class="close-ad">x</div>
+                            <a>
+                                <img src={ad0}
+                                    alt="Ad" />
+                            </a>
+                            <div className="close-ad">x</div>
                         </div>
-                    </a>
                 </div>
             </div>
             <SearchBar />
             <div className="mt-5
-                pt-5
+                pt-5 current-content
             "
             >
                 <h1>Welcome to Stock Homepage</h1>
@@ -153,7 +152,20 @@ export default function Home() {
                     }
                 </div>
             </div>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right"
+                onClick={() => {
+                    document.querySelector('.search-bar').classList.toggle('hidden')
+                    document.querySelector('.current-content').classList.toggle('hidden')
+                }}
+            ></i>
+            {/* <div 
+                className='new-content'
+            >
+                <h1>New Content</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, varius dolor. Donec pellentesque, eros a tincidunt consectetur, erat turpis bibendum dolor, a efficitur arcu neque in turpis. Mauris nec nisi nec nunc ultrices suscipit. Nulla facilisi. Nulla nec purus feugiat, molestie ipsum et, varius dolor. Donec pellentesque, eros a tincidunt consectetur, erat turpis bibendum dolor, a efficitur arcu neque in turpis. Mauris nec nisi nec nunc ultrices suscipit. Nulla facilisi.
+                </p>
+            </div> */}
         </div>
     )
 }

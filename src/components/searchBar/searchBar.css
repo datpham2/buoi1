@@ -1,0 +1,8 @@
+.search-bar {
+    left: 50%;
+    transition: 2.1s;
+}
+
+.search-bar.hidden {
+    left: -60%;
+}

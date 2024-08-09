@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './searchBar.css';
 
 export default function SearchBar() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -107,7 +108,7 @@ export default function SearchBar() {
     }, []);
 
     return (
-        <div className='search-bar w-100 position-absolute top-0 start-50 translate-middle-x mt-4 z-1'>
+        <div className='search-bar w-100 position-absolute top-0 translate-middle-x mt-4 z-1'>
             <div className="input-group mt-3 w-50 mx-auto">
                 <input
                     type="text"
