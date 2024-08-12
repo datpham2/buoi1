@@ -43,7 +43,7 @@ export default function SearchBar(props) {
                     `;
                     /* add onclick event */
                     div.addEventListener('click', () => {
-                        window.location.href = `/#/quote/${stock.id}`;
+                        window.location.href = `#/quote/${stock.id}`;
                     });
                     stockLi.appendChild(div);
                 });
