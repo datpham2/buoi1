@@ -45,7 +45,6 @@ const StockDetail = () => {
                      <h2 className='fw-bold'>
                         {stockDetail.longName} ({stockDetail.symbol})
                      </h2>
-                     <p>Symbol: XYZ</p>
                      <p>Price: ${stockDetail.price}
                      </p>
                      <p>Volume: 1000</p>
