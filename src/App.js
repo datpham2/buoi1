@@ -8,7 +8,6 @@ import StockNews from './pages/news/StockNews'
 export default function App() {
   return (
     <div>
-      <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/quote/:symbol' element={<StockDetail />} />
@@ -18,7 +17,6 @@ export default function App() {
           <Route path='/stock/:symbol/chart' element={<StockChart />} /><Route path='/stock/:symbol/news' element={<StockNews />} />
           } /> */}
         </Routes>
-      </BrowserRouter>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 {
   "name": "buoi1",
   "version": "0.1.0",
-  "homepage": "https://datpham2.github.io/buoi1/",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
