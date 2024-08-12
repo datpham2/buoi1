@@ -182,6 +182,7 @@ h1 {
     top: 0;
     left: 1920px;
     transition: left 3.5s;
+    font-family: sans-serif;
 }
 
 .new-content.show {
@@ -196,6 +197,7 @@ h1 {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    font-family: sans-serif;
 }
 
 .home .new-content .article-post-search {
