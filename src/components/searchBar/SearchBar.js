@@ -77,7 +77,7 @@ export default function SearchBar(props) {
                     resultLi.innerHTML = `<p class="text-primary"><small>${result.symbol}</small></p><p><small class="text-secondary">${result.longName}</small></p>`;
                     searchResult.appendChild(resultLi);
                     resultLi.addEventListener('click', () => {
-                        window.location.href = `/#/quote/${result.id}`;
+                        window.location.href = `#/quote/${result.id}`;
                     });
                 });
             })
