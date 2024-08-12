@@ -483,13 +483,13 @@ export default function Home() {
                 <nav aria-label="pagination" class="d-flex justify-content-center">
                     <ul class="pagination">
                         <li class="page-item active">
-                            <a class="page-link" href="?page={{ page_obj.number }}">1</a>
+                            <a class="page-link" href="?page=1">1</a>
                         </li>
                         <li class="page-item">
-                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">2</a>
+                            <a class="page-link" href="?page=2">2</a>
                         </li>
                         <li class="page-item">
-                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                            <a class="page-link" href="?page=2">Next</a>
                         </li>
                     </ul>
                 </nav>
