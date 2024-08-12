@@ -116,7 +116,7 @@ export default function Home() {
                                         return
                                     }
 
-                                    window.location.href = `/quote/${stock.id}`
+                                    window.location.href = `/#/quote/${stock.id}`
                                 }}
                             >
                                 <div className='stock-info'>
@@ -170,16 +170,47 @@ export default function Home() {
                 <Header />
                 <div class="article">
                     <div class="date text-muted">
-                        Dec. 15, 2021
+                        Aug. 9 , 2024
                     </div>
                     <div class="article-post">
                         <div class="main">
 
                             <p class="headline">
-                                <a href="/23">Coronavirus Briefing: Britain’s Omicron restrictions</a>
+                                <a href="/23">Warren Buffett Just Sold $90 Billion of Apple Stock. Could This Be the Biggest Investing Mistake He's Ever Made?</a>
                             </p>
                             <p class="summary">
-                                <a href="/23">And the verdict on Pfizer’s Covid pill.</a>
+                                <a href="/23">In the second quarter of 2024, Warren Buffett sold roughly $90 billion of Berkshire Hathaway's Apple (NASDAQ: AAPL) shares. This comes on the heels of Berkshire also selling blocks of its Apple stock in the fourth quarter of 2023 and the first quarter of 2024.</a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    FOO
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/PAX0hoi2VWMTraYCREuxNQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MDtjZj13ZWJw/https://media.zenfs.com/en/motleyfool.com/e06b98920356a5399f39747db40ebe15" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9 , 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Down 79%, This Growth Stock Could Double in the Housing Rebound</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">The S&P 500 plunged 6% over the first three trading days of August as a raft of downbeat economic data convinced investors that the economy was weakening faster than expected and the Fed had erred in not lowering rates.</a>
                             </p>
                             <p class="reporters">
                                 <a href="/23">
@@ -194,11 +225,274 @@ export default function Home() {
                         </div>
                         <div class="image">
                             <a href="/23">
-                                <img src="https://static01.nyt.com/images/2020/07/21/us/cases_orphan_usa-1595349567192-copy/cases_orphan_usa-1595349567192-jumbo-v1120.png?quality=75&amp;auto=webp" alt="" />
+                                <img src="https://s.yimg.com/ny/api/res/1.2/R3kp4vATcuSMIhW0h8UfaA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY1MQ--/https://media.zenfs.com/en/motleyfool.com/8c348e7413c9db30753637802181f924" alt="" />
                             </a>
                         </div>
                     </div>
                 </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Asian Equities Advance Ahead of Busy Data Week: Markets Wrap</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">Shares in Asia climbed for a second session as markets shifted focus to key US data prints this week for further insight into the health of the world’s biggest economy.</a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAZ
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/Nf7h8uMpVxCY8WTU9fbggw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MDtjZj13ZWJw/https://media.zenfs.com/en/bloomberg_markets_842/c65777df2cf47512b36447c7368807eb" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Yen slips, markets brace for US inflation data</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">The yen was a tad softer against the dollar in trading thinned by a Japanese holiday on Monday, with market participants still ambivalent about the odds of a big Fed rate cut next month.</a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAR
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/w6iB9Enh7Q5pcWKRQ3DRCw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MDtjZj13ZWJw/https://media.zenfs.com/en/reuters-finance.com/6c925559e99a0895e7f3e00bc4eb0088" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">China's bond market rattled as central bank squares off with bond bulls</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">China's bond market, the world's second largest, is on edge following a turbulent week in which the central bank started intervening heavily to stem a plunge in yields even as the economy is struggling.</a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAR
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/3XFfWbXqpsHrX9oPdlbYdA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY1OTtjZj13ZWJw/https://media.zenfs.com/en/reuters-finance.com/a9d62a793bd08ec0d6826981b918d061" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Market Sell-Off: Is It Time to Buy the Dip on This Phenomenal Streaming Stock?</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">Investors have been hit with some turmoil in recent days. Soft U.S. economic data, an interest rate hike in Japan</a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    FOO
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/mEgaIo4V0QPKPq9UIBFEfQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MDtjZj13ZWJw/https://media.zenfs.com/en/motleyfool.com/57afbb3661d68adf213e3a057cd0543b" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Carry-Trade Blowup Haunts Markets Rattled by Rapid-Fire Unwind</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">By now, last Monday’s global market meltdown looks more like a brief tremor, a fleeting panic unleashed by a small policy shift from the Bank of Japan and resurgent fears of a US recession.</a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAR
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/X.yEMjp4pi.q34DAFYiy2Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MDtjZj13ZWJw/https://media.zenfs.com/en/bloomberg_markets_842/6a8c7d0d8e4d50d899d99477fe25924a" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Prediction: 1 Top Artificial Intelligence (AI) Semiconductor Stock That Could Be Worth $1 Trillion</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">Artificial intelligence (AI) has turned out to be a solid growth driver for many semiconductor companies.</a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAZ
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/_51LJvQLAA6W8f.ehQVL8g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTUwNztjZj13ZWJw/https://media.zenfs.com/en/motleyfool.com/6926f2b81a29628f70269190e2af123a" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Is Now the Time to Buy the 2 Worst-Performing Stocks in the "Magnificent Seven"?</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">Big tech stocks are struggling lately as investors grow concerned about whether investments into artificial intelligence (AI) will pay off, and if valuations have simply become too high.    </a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    FOO
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/HtvNg0YgTfrI.tKgrLyKZw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY3NjtjZj13ZWJw/https://media.zenfs.com/en/motleyfool.com/543c303b766c4a758a86e5dca2b55457" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">Expedia stock price targets get reset by analysts after CEO sounds alarm</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">July and August are usually the months when people go on vacations. However, Expedia  (EXPE)  is warning about weak travel demand this summer.
+
+                                </a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAR
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/qauOCOhW2DUaoRexT.fB1w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MDtjZj13ZWJw/https://media.zenfs.com/en/thestreet_881/0c61ab36ac1cd3dea363feb0799000e3" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="pagination" class="d-flex justify-content-center">
+                    <ul class="pagination">
+                        <li class="page-item active">
+                            <a class="page-link" href="?page={{ page_obj.number }}">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     )

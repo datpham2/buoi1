@@ -35,7 +35,7 @@ const StockDetail = () => {
             className='stock-detail'
         >
             <SearchBar />
-            {stockDetail ? (
+            {stockDetail && (
                 <div className="container">
                  <h1
                     className="fw-bold"
@@ -59,8 +59,6 @@ const StockDetail = () => {
                     </div>
                     <Articles stockSymbol={symbol} />
              </div>
-            ) : (
-                <p>Loading stock detail...</p>
             )}
         </div>
     );
