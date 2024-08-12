@@ -13,7 +13,6 @@ export default function SearchBar(props) {
             .then((data) => {
                 const searchResult = document.getElementById('result');
                 searchResult.innerHTML = '';
-                /* add h3 element */
                 const h3 = document.createElement('h3');
                 h3.className = 'z-3 bg-white fs-6 fw-bold text-dark mt-2 mb-0 p-2 trending-tickers';
                 h3.innerHTML = 'Trending Tickers';
@@ -41,7 +40,6 @@ export default function SearchBar(props) {
 
                     })</small></div>
                     `;
-                    /* add onclick event */
                     div.addEventListener('click', () => {
                         window.location.href = `#/quote/${stock.id}`;
                     });
