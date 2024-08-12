@@ -116,7 +116,7 @@ export default function Home() {
                                         return
                                     }
 
-                                    window.location.href = `/#/quote/${stock.id}`
+                                    window.location.href = `/quote/${stock.id}`
                                 }}
                             >
                                 <div className='stock-info'>
