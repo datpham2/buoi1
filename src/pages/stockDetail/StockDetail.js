@@ -37,9 +37,6 @@ const StockDetail = () => {
             <SearchBar />
             {stockDetail && (
                 <div className="container">
-                 <h1
-                    className="fw-bold"
-                 >Finance Detail Page</h1>
                  
                  <div className="stock-info">
                      <h2 className='fw-bold'>
