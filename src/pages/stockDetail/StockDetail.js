@@ -38,7 +38,7 @@ const StockDetail = () => {
             {stockDetail && (
                 <div className="container">
                  
-                 <div className="stock-info">
+                 <div className="stock-info mt-5">
                      <h2 className='fw-bold'>
                         {stockDetail.longName} ({stockDetail.symbol})
                      </h2>
