@@ -129,7 +129,7 @@ export default function Header() {
                     </button>
                 </form>
                 <div className="dropdown-item">
-                    <a className="nav-link active" aria-current="page" href="{% url 'index'%}">Home</a>
+                    <a className="nav-link active" aria-current="page" href="/#">Home</a>
                 </div>
                 <div className="dropdown-item">
                     <a className="nav-link active" aria-current="page" href="{% url 'section' category %}">World</a>

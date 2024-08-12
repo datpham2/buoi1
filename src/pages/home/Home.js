@@ -179,7 +179,7 @@ export default function Home() {
                                 <a href="/23">Warren Buffett Just Sold $90 Billion of Apple Stock. Could This Be the Biggest Investing Mistake He's Ever Made?</a>
                             </p>
                             <p class="summary">
-                                <a href="/23">In the second quarter of 2024, Warren Buffett sold roughly $90 billion of Berkshire Hathaway's Apple (NASDAQ: AAPL) shares. This comes on the heels of Berkshire also selling blocks of its Apple stock in the fourth quarter of 2023 and the first quarter of 2024.</a>
+                                <a href="/23">Starting in Q1 of 2024, Warren Buffett epically downsized his immense holdings of Apple stock in one of the best-publicized selloffs by any ...</a>
                             </p>
                             <p class="reporters">
                                 <a href="/23">
@@ -476,6 +476,72 @@ export default function Home() {
                         <div class="image">
                             <a href="/23">
                                 <img src="https://s.yimg.com/ny/api/res/1.2/qauOCOhW2DUaoRexT.fB1w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MDtjZj13ZWJw/https://media.zenfs.com/en/thestreet_881/0c61ab36ac1cd3dea363feb0799000e3" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">There's a hidden risk lurking for AI stocks in 2025</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">An accounting method used to spread the cost of new technology over the course of years could end up causing problems for firms spending big on AI chips.
+
+                                </a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAR
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/ZPwt2Aw6aDdGpHCJAaLABA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTQ4MDtjZj13ZWJw/https://media.zenfs.com/en/business_insider_articles_888/662d325fc28549da01aada19d2f3c5f4" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="date text-muted">
+                        Aug. 9, 2024
+                    </div>
+                    <div class="article-post">
+                        <div class="main">
+
+                            <p class="headline">
+                                <a href="/23">The stock market suffers another August scare. Here are the lessons for investors.</a>
+                            </p>
+                            <p class="summary">
+                                <a href="/23">Investors got whipsawed by wild markets in the past week. Here are some lessons learned.
+
+                                </a>
+                            </p>
+                            <p class="reporters">
+                                <a href="/23">
+                                    By
+
+
+                                    BAR
+
+
+                                </a>
+                            </p>
+                        </div>
+                        <div class="image">
+                            <a href="/23">
+                                <img src="https://s.yimg.com/ny/api/res/1.2/73yGS0EBCd6dQ2SqXVptVQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY2NztjZj13ZWJw/https://media.zenfs.com/en/marketwatch_hosted_869/fbc4f04d34cb3323cbe28f6ccc1ed0d3" alt="" />
                             </a>
                         </div>
                     </div>

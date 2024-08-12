@@ -481,6 +481,7 @@ h1 {
 
 #summary {
     color: #333;
+    font-size: 1.2rem;
 }
 
 #query::placeholder {
@@ -786,7 +787,7 @@ option {
 
 .main {
     padding: 14px;
-    font-size: 0.8rem;
+    font-size: 10rem;
     width: 50%;
 }
 
@@ -836,7 +837,7 @@ option {
 
 .main {
     padding: 14px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 50%;
 }
 
@@ -856,4 +857,12 @@ option {
 
 .image-search {
     flex-basis: 30%;
+}
+
+.headline, .headline-search {
+    font-size: 1.3rem;
+}
+
+.home .new-content .main .summary a {
+    font-size: 0.9rem;
 }
